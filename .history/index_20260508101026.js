@@ -1,7 +1,7 @@
 exports.handler = async (event) => {
     const path = event.rawPath || event.path;
 
-    if (path === "health") {
+    if (path === "/health") {
         return {
             statusCode: 200,
             body: JSON.stringify({
