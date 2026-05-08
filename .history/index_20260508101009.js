@@ -1,12 +1,9 @@
 exports.handler = async (event) => {
-    const path = event.rawPath || event.path;
-
-    if (path === "/health") {
+    if (event.rawPath === "/health") {
         return {
             statusCode: 200,
             body: JSON.stringify({
-                status: "OK",
-                message: "Service is healthy"
+                status: "OK"
             })
         };
     }
@@ -14,7 +11,7 @@ exports.handler = async (event) => {
     return {
         statusCode: 200,
         body: JSON.stringify({
-            message: "CI/CD working perfectly"
+            message: "CI/CD working perfectly arjun"
         })
     };
 };
